@@ -1,0 +1,43 @@
+[project]
+name = "pydantic-shardkey-fastembed"
+version = "0.1.0"
+description = "Pydantic, ShardKey ve Fastembed ile Qdrant tabanlı vektör arama projesi"
+authors = [
+    { name="Abdullatif Akkaya", email="abdullatif.akkaya@etiya.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/kullanici/proje-adi"
+Documentation = "https://github.com/kullanici/proje-adi/wiki"
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.setuptools.package-data]
+"data" = ["*.parquet"]
+
+[project.dependencies]
+pydantic = "^2.11.7"
+pydantic-settings = "^2.10.1"
+qdrant-client = "^1.14.3"
+fastembed = "^0.7.1"
+pandas = "^2.3"
+pyarrow = "^20.0"
+matplotlib = "^3.7"
+streamlit = "^1.46.1"
+plotly = "^5.15"
+loguru = "^0.7.3"
+datasets = "^3.6"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "mypy"
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
